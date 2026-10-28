@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "PhotoPilot AI: local server",
+			"type": "shell",
+			"command": "${workspaceFolder}/venv/Scripts/python.exe",
+			"options": { "cwd": "${workspaceFolder}" },
+			"args": [
+				"-m",
+				"streamlit",
+				"run",
+				"app.py",
+				"--server.address",
+				"127.0.0.1",
+				"--server.port",
+				"8507",
+				"--server.headless",
+				"true",
+				"--browser.gatherUsageStats",
+				"false"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
